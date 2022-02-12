@@ -22,7 +22,7 @@ RUN elyra-metadata install runtimes \
        --user_namespace="airflow" \
        --github_repo="michelmourasilva/airflowdags" \
        --github_branch="master" \
-       --github_repo_token="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" \
+       --github_repo_token="" \
        --cos_endpoint=http://172.20.0.14:9000 \
        --cos_bucket=test-bucket \
        --cos_username=minio \
