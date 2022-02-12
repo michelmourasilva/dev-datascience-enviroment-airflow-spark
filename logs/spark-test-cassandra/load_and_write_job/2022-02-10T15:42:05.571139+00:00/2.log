@@ -1,0 +1,562 @@
+[2022-02-10 15:45:21,368] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: spark-test-cassandra.load_and_write_job manual__2022-02-10T15:42:05.571139+00:00 [queued]>
+[2022-02-10 15:45:21,386] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: spark-test-cassandra.load_and_write_job manual__2022-02-10T15:42:05.571139+00:00 [queued]>
+[2022-02-10 15:45:21,387] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 15:45:21,387] {taskinstance.py:1239} INFO - Starting attempt 2 of 2
+[2022-02-10 15:45:21,387] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 15:45:21,414] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): load_and_write_job> on 2022-02-10 15:42:05.571139+00:00
+[2022-02-10 15:45:21,419] {standard_task_runner.py:52} INFO - Started process 384 to run task
+[2022-02-10 15:45:21,424] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'spark-test-cassandra', 'load_and_write_job', 'manual__2022-02-10T15:42:05.571139+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/spark-cassandra-dag.py', '--cfg-path', '/tmp/tmptrd7g3gj', '--error-file', '/tmp/tmp5pe5tuqd']
+[2022-02-10 15:45:21,425] {standard_task_runner.py:77} INFO - Job 3: Subtask load_and_write_job
+[2022-02-10 15:45:21,517] {logging_mixin.py:109} INFO - Running <TaskInstance: spark-test-cassandra.load_and_write_job manual__2022-02-10T15:42:05.571139+00:00 [running]> on host 980639fb6da9
+[2022-02-10 15:45:21,614] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=spark-test-cassandra
+AIRFLOW_CTX_TASK_ID=load_and_write_job
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-10T15:42:05.571139+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-10T15:42:05.571139+00:00
+[2022-02-10 15:45:21,616] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-02-10 15:45:21,616] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'spark-submit             --packages com.datastax.spark:spark-cassandra-connector_2.12:3.1.0             /usr/local/spark/app/spark-cassandra-test.py']
+[2022-02-10 15:45:21,630] {subprocess.py:85} INFO - Output:
+[2022-02-10 15:45:24,178] {subprocess.py:89} INFO - WARNING: An illegal reflective access operation has occurred
+[2022-02-10 15:45:24,179] {subprocess.py:89} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/spark-unsafe_2.12-3.2.0.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2022-02-10 15:45:24,179] {subprocess.py:89} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2022-02-10 15:45:24,179] {subprocess.py:89} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2022-02-10 15:45:24,179] {subprocess.py:89} INFO - WARNING: All illegal access operations will be denied in a future release
+[2022-02-10 15:45:24,417] {subprocess.py:89} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2022-02-10 15:45:24,559] {subprocess.py:89} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2022-02-10 15:45:24,559] {subprocess.py:89} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2022-02-10 15:45:24,567] {subprocess.py:89} INFO - com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
+[2022-02-10 15:45:24,569] {subprocess.py:89} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-de0b556c-9817-4b4d-a604-2bb7ce7c9bb4;1.0
+[2022-02-10 15:45:24,569] {subprocess.py:89} INFO - 	confs: [default]
+[2022-02-10 15:45:24,762] {subprocess.py:89} INFO - 	found com.datastax.spark#spark-cassandra-connector_2.12;3.1.0 in central
+[2022-02-10 15:45:24,822] {subprocess.py:89} INFO - 	found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.1.0 in central
+[2022-02-10 15:45:24,917] {subprocess.py:89} INFO - 	found com.datastax.oss#java-driver-core-shaded;4.12.0 in central
+[2022-02-10 15:45:24,979] {subprocess.py:89} INFO - 	found com.datastax.oss#native-protocol;1.5.0 in central
+[2022-02-10 15:45:25,026] {subprocess.py:89} INFO - 	found com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 in central
+[2022-02-10 15:45:25,066] {subprocess.py:89} INFO - 	found com.typesafe#config;1.4.1 in central
+[2022-02-10 15:45:25,157] {subprocess.py:89} INFO - 	found org.slf4j#slf4j-api;1.7.26 in central
+[2022-02-10 15:45:25,187] {subprocess.py:89} INFO - 	found io.dropwizard.metrics#metrics-core;4.1.18 in central
+[2022-02-10 15:45:25,214] {subprocess.py:89} INFO - 	found org.hdrhistogram#HdrHistogram;2.1.12 in central
+[2022-02-10 15:45:25,237] {subprocess.py:89} INFO - 	found org.reactivestreams#reactive-streams;1.0.3 in central
+[2022-02-10 15:45:25,254] {subprocess.py:89} INFO - 	found com.github.stephenc.jcip#jcip-annotations;1.0-1 in central
+[2022-02-10 15:45:25,277] {subprocess.py:89} INFO - 	found com.github.spotbugs#spotbugs-annotations;3.1.12 in central
+[2022-02-10 15:45:25,299] {subprocess.py:89} INFO - 	found com.google.code.findbugs#jsr305;3.0.2 in central
+[2022-02-10 15:45:25,331] {subprocess.py:89} INFO - 	found com.datastax.oss#java-driver-mapper-runtime;4.12.0 in central
+[2022-02-10 15:45:25,356] {subprocess.py:89} INFO - 	found com.datastax.oss#java-driver-query-builder;4.12.0 in central
+[2022-02-10 15:45:25,389] {subprocess.py:89} INFO - 	found org.apache.commons#commons-lang3;3.10 in central
+[2022-02-10 15:45:25,409] {subprocess.py:89} INFO - 	found com.thoughtworks.paranamer#paranamer;2.8 in central
+[2022-02-10 15:45:25,427] {subprocess.py:89} INFO - 	found org.scala-lang#scala-reflect;2.12.11 in central
+[2022-02-10 15:45:25,518] {subprocess.py:89} INFO - :: resolution report :: resolve 904ms :: artifacts dl 43ms
+[2022-02-10 15:45:25,518] {subprocess.py:89} INFO - 	:: modules in use:
+[2022-02-10 15:45:25,519] {subprocess.py:89} INFO - 	com.datastax.oss#java-driver-core-shaded;4.12.0 from central in [default]
+[2022-02-10 15:45:25,520] {subprocess.py:89} INFO - 	com.datastax.oss#java-driver-mapper-runtime;4.12.0 from central in [default]
+[2022-02-10 15:45:25,520] {subprocess.py:89} INFO - 	com.datastax.oss#java-driver-query-builder;4.12.0 from central in [default]
+[2022-02-10 15:45:25,521] {subprocess.py:89} INFO - 	com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 from central in [default]
+[2022-02-10 15:45:25,521] {subprocess.py:89} INFO - 	com.datastax.oss#native-protocol;1.5.0 from central in [default]
+[2022-02-10 15:45:25,522] {subprocess.py:89} INFO - 	com.datastax.spark#spark-cassandra-connector-driver_2.12;3.1.0 from central in [default]
+[2022-02-10 15:45:25,523] {subprocess.py:89} INFO - 	com.datastax.spark#spark-cassandra-connector_2.12;3.1.0 from central in [default]
+[2022-02-10 15:45:25,524] {subprocess.py:89} INFO - 	com.github.spotbugs#spotbugs-annotations;3.1.12 from central in [default]
+[2022-02-10 15:45:25,524] {subprocess.py:89} INFO - 	com.github.stephenc.jcip#jcip-annotations;1.0-1 from central in [default]
+[2022-02-10 15:45:25,524] {subprocess.py:89} INFO - 	com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+[2022-02-10 15:45:25,525] {subprocess.py:89} INFO - 	com.thoughtworks.paranamer#paranamer;2.8 from central in [default]
+[2022-02-10 15:45:25,525] {subprocess.py:89} INFO - 	com.typesafe#config;1.4.1 from central in [default]
+[2022-02-10 15:45:25,525] {subprocess.py:89} INFO - 	io.dropwizard.metrics#metrics-core;4.1.18 from central in [default]
+[2022-02-10 15:45:25,526] {subprocess.py:89} INFO - 	org.apache.commons#commons-lang3;3.10 from central in [default]
+[2022-02-10 15:45:25,526] {subprocess.py:89} INFO - 	org.hdrhistogram#HdrHistogram;2.1.12 from central in [default]
+[2022-02-10 15:45:25,526] {subprocess.py:89} INFO - 	org.reactivestreams#reactive-streams;1.0.3 from central in [default]
+[2022-02-10 15:45:25,527] {subprocess.py:89} INFO - 	org.scala-lang#scala-reflect;2.12.11 from central in [default]
+[2022-02-10 15:45:25,527] {subprocess.py:89} INFO - 	org.slf4j#slf4j-api;1.7.26 from central in [default]
+[2022-02-10 15:45:25,527] {subprocess.py:89} INFO - 	---------------------------------------------------------------------
+[2022-02-10 15:45:25,528] {subprocess.py:89} INFO - 	|                  |            modules            ||   artifacts   |
+[2022-02-10 15:45:25,528] {subprocess.py:89} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2022-02-10 15:45:25,528] {subprocess.py:89} INFO - 	---------------------------------------------------------------------
+[2022-02-10 15:45:25,529] {subprocess.py:89} INFO - 	|      default     |   18  |   0   |   0   |   0   ||   18  |   0   |
+[2022-02-10 15:45:25,529] {subprocess.py:89} INFO - 	---------------------------------------------------------------------
+[2022-02-10 15:45:25,546] {subprocess.py:89} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-de0b556c-9817-4b4d-a604-2bb7ce7c9bb4
+[2022-02-10 15:45:25,546] {subprocess.py:89} INFO - 	confs: [default]
+[2022-02-10 15:45:25,577] {subprocess.py:89} INFO - 	0 artifacts copied, 18 already retrieved (0kB/30ms)
+[2022-02-10 15:45:25,983] {subprocess.py:89} INFO - 22/02/10 15:45:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2022-02-10 15:45:27,436] {subprocess.py:89} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2022-02-10 15:45:27,445] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SparkContext: Running Spark version 3.2.0
+[2022-02-10 15:45:27,475] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO ResourceUtils: ==============================================================
+[2022-02-10 15:45:27,476] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2022-02-10 15:45:27,476] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO ResourceUtils: ==============================================================
+[2022-02-10 15:45:27,477] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SparkContext: Submitted application: extract_and_load
+[2022-02-10 15:45:27,506] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2022-02-10 15:45:27,523] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO ResourceProfile: Limiting resource is cpu
+[2022-02-10 15:45:27,523] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2022-02-10 15:45:27,592] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SecurityManager: Changing view acls to: ***
+[2022-02-10 15:45:27,593] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SecurityManager: Changing modify acls to: ***
+[2022-02-10 15:45:27,594] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SecurityManager: Changing view acls groups to:
+[2022-02-10 15:45:27,594] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SecurityManager: Changing modify acls groups to:
+[2022-02-10 15:45:27,595] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(***); groups with view permissions: Set(); users  with modify permissions: Set(***); groups with modify permissions: Set()
+[2022-02-10 15:45:27,953] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO Utils: Successfully started service 'sparkDriver' on port 44487.
+[2022-02-10 15:45:27,983] {subprocess.py:89} INFO - 22/02/10 15:45:27 INFO SparkEnv: Registering MapOutputTracker
+[2022-02-10 15:45:28,022] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkEnv: Registering BlockManagerMaster
+[2022-02-10 15:45:28,050] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2022-02-10 15:45:28,051] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2022-02-10 15:45:28,056] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2022-02-10 15:45:28,087] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-107cb60d-117b-4995-abdd-51da2df67e19
+[2022-02-10 15:45:28,118] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2022-02-10 15:45:28,139] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkEnv: Registering OutputCommitCoordinator
+[2022-02-10 15:45:28,442] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2022-02-10 15:45:28,504] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://980639fb6da9:4040
+[2022-02-10 15:45:28,521] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar at spark://980639fb6da9:44487/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,521] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar at spark://980639fb6da9:44487/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,521] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar at spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,522] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar at spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,522] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar at spark://980639fb6da9:44487/jars/org.apache.commons_commons-lang3-3.10.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,522] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar at spark://980639fb6da9:44487/jars/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,522] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar at spark://980639fb6da9:44487/jars/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,522] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar at spark://980639fb6da9:44487/jars/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,523] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar at spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,523] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar at spark://980639fb6da9:44487/jars/com.typesafe_config-1.4.1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,523] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.26.jar at spark://980639fb6da9:44487/jars/org.slf4j_slf4j-api-1.7.26.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,523] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar at spark://980639fb6da9:44487/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,523] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar at spark://980639fb6da9:44487/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,524] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar at spark://980639fb6da9:44487/jars/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,524] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar at spark://980639fb6da9:44487/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,524] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar at spark://980639fb6da9:44487/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,524] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at spark://980639fb6da9:44487/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,524] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar at spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,528] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar at file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,529] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar
+[2022-02-10 15:45:28,540] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar at file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,540] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar
+[2022-02-10 15:45:28,545] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar at file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,545] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-core-shaded-4.12.0.jar
+[2022-02-10 15:45:28,556] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar at file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,556] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar
+[2022-02-10 15:45:28,561] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar at file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,561] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.apache.commons_commons-lang3-3.10.jar
+[2022-02-10 15:45:28,565] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar at file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,565] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.thoughtworks.paranamer_paranamer-2.8.jar
+[2022-02-10 15:45:28,569] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar at file:///home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,569] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.scala-lang_scala-reflect-2.12.11.jar
+[2022-02-10 15:45:28,577] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar at file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,577] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_native-protocol-1.5.0.jar
+[2022-02-10 15:45:28,581] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar at file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,581] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar
+[2022-02-10 15:45:28,588] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar at file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,588] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.typesafe_config-1.4.1.jar
+[2022-02-10 15:45:28,594] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.26.jar at file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.26.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,594] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.26.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.slf4j_slf4j-api-1.7.26.jar
+[2022-02-10 15:45:28,598] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar at file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,598] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/io.dropwizard.metrics_metrics-core-4.1.18.jar
+[2022-02-10 15:45:28,602] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar at file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,602] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.hdrhistogram_HdrHistogram-2.1.12.jar
+[2022-02-10 15:45:28,606] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar at file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,607] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.reactivestreams_reactive-streams-1.0.3.jar
+[2022-02-10 15:45:28,610] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar at file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,610] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar
+[2022-02-10 15:45:28,614] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar at file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,614] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.spotbugs_spotbugs-annotations-3.1.12.jar
+[2022-02-10 15:45:28,618] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,619] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.google.code.findbugs_jsr305-3.0.2.jar
+[2022-02-10 15:45:28,622] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar at file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,622] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-query-builder-4.12.0.jar
+[2022-02-10 15:45:28,805] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Starting executor ID driver on host 980639fb6da9
+[2022-02-10 15:45:28,822] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,851] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_native-protocol-1.5.0.jar
+[2022-02-10 15:45:28,855] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,855] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.spotbugs_spotbugs-annotations-3.1.12.jar
+[2022-02-10 15:45:28,860] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,861] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.google.code.findbugs_jsr305-3.0.2.jar
+[2022-02-10 15:45:28,864] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,867] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/io.dropwizard.metrics_metrics-core-4.1.18.jar
+[2022-02-10 15:45:28,871] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,873] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar
+[2022-02-10 15:45:28,876] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.26.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,877] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.26.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.slf4j_slf4j-api-1.7.26.jar
+[2022-02-10 15:45:28,880] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,883] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar
+[2022-02-10 15:45:28,886] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,886] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar
+[2022-02-10 15:45:28,889] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,890] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.apache.commons_commons-lang3-3.10.jar
+[2022-02-10 15:45:28,895] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,895] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar
+[2022-02-10 15:45:28,898] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,898] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.reactivestreams_reactive-streams-1.0.3.jar
+[2022-02-10 15:45:28,901] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,902] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.thoughtworks.paranamer_paranamer-2.8.jar
+[2022-02-10 15:45:28,905] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,907] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar
+[2022-02-10 15:45:28,911] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,911] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-query-builder-4.12.0.jar
+[2022-02-10 15:45:28,915] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,919] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.scala-lang_scala-reflect-2.12.11.jar
+[2022-02-10 15:45:28,922] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,922] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.typesafe_config-1.4.1.jar
+[2022-02-10 15:45:28,926] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,933] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-core-shaded-4.12.0.jar
+[2022-02-10 15:45:28,936] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,937] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: /home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.hdrhistogram_HdrHistogram-2.1.12.jar
+[2022-02-10 15:45:28,942] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:28,986] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO TransportClientFactory: Successfully created connection to 980639fb6da9/192.168.208.9:44487 after 33 ms (0 ms spent in bootstraps)
+[2022-02-10 15:45:28,994] {subprocess.py:89} INFO - 22/02/10 15:45:28 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_native-protocol-1.5.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp1503852258194903059.tmp
+[2022-02-10 15:45:29,031] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp1503852258194903059.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_native-protocol-1.5.0.jar
+[2022-02-10 15:45:29,034] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_native-protocol-1.5.0.jar to class loader
+[2022-02-10 15:45:29,035] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,035] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp11794272462281728449.tmp
+[2022-02-10 15:45:29,038] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp11794272462281728449.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.hdrhistogram_HdrHistogram-2.1.12.jar
+[2022-02-10 15:45:29,041] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.hdrhistogram_HdrHistogram-2.1.12.jar to class loader
+[2022-02-10 15:45:29,042] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,042] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp5690455487058256033.tmp
+[2022-02-10 15:45:29,056] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp5690455487058256033.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar
+[2022-02-10 15:45:29,061] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar to class loader
+[2022-02-10 15:45:29,061] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.typesafe_config-1.4.1.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,062] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.typesafe_config-1.4.1.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp7690735987403070256.tmp
+[2022-02-10 15:45:29,065] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp7690735987403070256.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.typesafe_config-1.4.1.jar
+[2022-02-10 15:45:29,069] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.typesafe_config-1.4.1.jar to class loader
+[2022-02-10 15:45:29,069] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,069] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp3972772469436900749.tmp
+[2022-02-10 15:45:29,071] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp3972772469436900749.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar
+[2022-02-10 15:45:29,074] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar to class loader
+[2022-02-10 15:45:29,075] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,075] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp8640387804501307834.tmp
+[2022-02-10 15:45:29,076] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp8640387804501307834.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.spotbugs_spotbugs-annotations-3.1.12.jar
+[2022-02-10 15:45:29,079] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.spotbugs_spotbugs-annotations-3.1.12.jar to class loader
+[2022-02-10 15:45:29,080] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,080] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/org.reactivestreams_reactive-streams-1.0.3.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp8495346026209698198.tmp
+[2022-02-10 15:45:29,082] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp8495346026209698198.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.reactivestreams_reactive-streams-1.0.3.jar
+[2022-02-10 15:45:29,085] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.reactivestreams_reactive-streams-1.0.3.jar to class loader
+[2022-02-10 15:45:29,085] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,086] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.google.code.findbugs_jsr305-3.0.2.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp7078941014770076801.tmp
+[2022-02-10 15:45:29,087] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp7078941014770076801.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.google.code.findbugs_jsr305-3.0.2.jar
+[2022-02-10 15:45:29,091] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.google.code.findbugs_jsr305-3.0.2.jar to class loader
+[2022-02-10 15:45:29,091] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,092] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp10246371463207043656.tmp
+[2022-02-10 15:45:29,094] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp10246371463207043656.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar
+[2022-02-10 15:45:29,097] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to class loader
+[2022-02-10 15:45:29,097] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,097] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp2265481913852909812.tmp
+[2022-02-10 15:45:29,105] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp2265481913852909812.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar
+[2022-02-10 15:45:29,109] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar to class loader
+[2022-02-10 15:45:29,109] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,109] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp11679298402675090408.tmp
+[2022-02-10 15:45:29,123] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp11679298402675090408.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar
+[2022-02-10 15:45:29,127] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to class loader
+[2022-02-10 15:45:29,128] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,128] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp4414245264174237288.tmp
+[2022-02-10 15:45:29,130] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp4414245264174237288.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/io.dropwizard.metrics_metrics-core-4.1.18.jar
+[2022-02-10 15:45:29,133] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/io.dropwizard.metrics_metrics-core-4.1.18.jar to class loader
+[2022-02-10 15:45:29,133] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/org.apache.commons_commons-lang3-3.10.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,134] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/org.apache.commons_commons-lang3-3.10.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp873612217128345654.tmp
+[2022-02-10 15:45:29,137] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp873612217128345654.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.apache.commons_commons-lang3-3.10.jar
+[2022-02-10 15:45:29,140] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.apache.commons_commons-lang3-3.10.jar to class loader
+[2022-02-10 15:45:29,141] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/org.slf4j_slf4j-api-1.7.26.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,141] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/org.slf4j_slf4j-api-1.7.26.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp4920398996315361026.tmp
+[2022-02-10 15:45:29,143] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp4920398996315361026.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.slf4j_slf4j-api-1.7.26.jar
+[2022-02-10 15:45:29,146] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.slf4j_slf4j-api-1.7.26.jar to class loader
+[2022-02-10 15:45:29,146] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,146] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.thoughtworks.paranamer_paranamer-2.8.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp1517304326063470562.tmp
+[2022-02-10 15:45:29,148] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp1517304326063470562.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.thoughtworks.paranamer_paranamer-2.8.jar
+[2022-02-10 15:45:29,151] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.thoughtworks.paranamer_paranamer-2.8.jar to class loader
+[2022-02-10 15:45:29,151] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,152] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/org.scala-lang_scala-reflect-2.12.11.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp14575398516887451350.tmp
+[2022-02-10 15:45:29,167] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp14575398516887451350.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.scala-lang_scala-reflect-2.12.11.jar
+[2022-02-10 15:45:29,171] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/org.scala-lang_scala-reflect-2.12.11.jar to class loader
+[2022-02-10 15:45:29,171] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,172] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp16879053958817254688.tmp
+[2022-02-10 15:45:29,174] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp16879053958817254688.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-query-builder-4.12.0.jar
+[2022-02-10 15:45:29,178] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-query-builder-4.12.0.jar to class loader
+[2022-02-10 15:45:29,178] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar with timestamp 1644507927432
+[2022-02-10 15:45:29,179] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Fetching spark://980639fb6da9:44487/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp9029984043102256534.tmp
+[2022-02-10 15:45:29,206] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/fetchFileTemp9029984043102256534.tmp has been previously copied to /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-core-shaded-4.12.0.jar
+[2022-02-10 15:45:29,210] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Executor: Adding file:/tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/userFiles-f2a162d0-e6d9-4fd9-a0c2-2eeb610feb69/com.datastax.oss_java-driver-core-shaded-4.12.0.jar to class loader
+[2022-02-10 15:45:29,217] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38707.
+[2022-02-10 15:45:29,217] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO NettyBlockTransferService: Server created on 980639fb6da9:38707
+[2022-02-10 15:45:29,219] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2022-02-10 15:45:29,225] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 980639fb6da9, 38707, None)
+[2022-02-10 15:45:29,230] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO BlockManagerMasterEndpoint: Registering block manager 980639fb6da9:38707 with 434.4 MiB RAM, BlockManagerId(driver, 980639fb6da9, 38707, None)
+[2022-02-10 15:45:29,232] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 980639fb6da9, 38707, None)
+[2022-02-10 15:45:29,233] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 980639fb6da9, 38707, None)
+[2022-02-10 15:45:29,658] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2022-02-10 15:45:29,661] {subprocess.py:89} INFO - 22/02/10 15:45:29 INFO SharedState: Warehouse path is 'file:/tmp/***tmpjzdqxd76/spark-warehouse'.
+[2022-02-10 15:45:33,800] {subprocess.py:89} INFO - 22/02/10 15:45:33 INFO DefaultMavenCoordinates: DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core-shaded) version 4.12.0
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - 22/02/10 15:45:34 INFO Native: Unable to load JNR native implementation. This could be normal if JNR is excluded from the classpath
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - java.lang.NoClassDefFoundError: jnr/posix/POSIXHandler
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.os.Native$LibcLoader.load(Native.java:42)
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.os.Native.<clinit>(Native.java:59)
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.time.Clock.getInstance(Clock.java:41)
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.time.MonotonicTimestampGenerator.buildClock(MonotonicTimestampGenerator.java:109)
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.time.MonotonicTimestampGenerator.<init>(MonotonicTimestampGenerator.java:43)
+[2022-02-10 15:45:34,013] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.time.AtomicTimestampGenerator.<init>(AtomicTimestampGenerator.java:52)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.util.Reflection.buildFromConfig(Reflection.java:246)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.util.Reflection.buildFromConfig(Reflection.java:108)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.context.DefaultDriverContext.buildTimestampGenerator(DefaultDriverContext.java:370)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.util.concurrent.LazyReference.get(LazyReference.java:55)
+[2022-02-10 15:45:34,014] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.context.DefaultDriverContext.getTimestampGenerator(DefaultDriverContext.java:709)
+[2022-02-10 15:45:34,015] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.session.DefaultSession$SingleThreaded.init(DefaultSession.java:349)
+[2022-02-10 15:45:34,015] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.session.DefaultSession$SingleThreaded.access$1100(DefaultSession.java:300)
+[2022-02-10 15:45:34,015] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.internal.core.session.DefaultSession.lambda$init$0(DefaultSession.java:146)
+[2022-02-10 15:45:34,015] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.shaded.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+[2022-02-10 15:45:34,015] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.shaded.netty.util.concurrent.PromiseTask.run(PromiseTask.java:106)
+[2022-02-10 15:45:34,015] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.shaded.netty.channel.DefaultEventLoop.run(DefaultEventLoop.java:54)
+[2022-02-10 15:45:34,015] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.shaded.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.shaded.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 	at com.datastax.oss.driver.shaded.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - Caused by: java.lang.ClassNotFoundException: jnr.posix.POSIXHandler
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 	... 25 more
+[2022-02-10 15:45:34,016] {subprocess.py:89} INFO - 22/02/10 15:45:34 INFO Clock: Could not access native clock (see debug logs for details), falling back to Java system clock
+[2022-02-10 15:45:34,884] {subprocess.py:89} INFO - 22/02/10 15:45:34 INFO CassandraConnector: Connected to Cassandra cluster.
+[2022-02-10 15:45:36,214] {subprocess.py:89} INFO - 22/02/10 15:45:36 INFO V2ScanRelationPushDown:
+[2022-02-10 15:45:36,214] {subprocess.py:89} INFO - Output: job_title#0, employee_id#1, employee_name#2, first_day#3, last_day#4
+[2022-02-10 15:45:36,214] {subprocess.py:89} INFO - 
+[2022-02-10 15:45:37,363] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO CodeGenerator: Code generated in 264.895371 ms
+[2022-02-10 15:45:37,495] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:37,512] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO DAGScheduler: Got job 0 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-02-10 15:45:37,513] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO DAGScheduler: Final stage: ResultStage 0 (showString at NativeMethodAccessorImpl.java:0)
+[2022-02-10 15:45:37,513] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO DAGScheduler: Parents of final stage: List()
+[2022-02-10 15:45:37,514] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO DAGScheduler: Missing parents: List()
+[2022-02-10 15:45:37,518] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-02-10 15:45:37,697] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 17.8 KiB, free 434.4 MiB)
+[2022-02-10 15:45:37,732] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 8.5 KiB, free 434.4 MiB)
+[2022-02-10 15:45:37,736] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 980639fb6da9:38707 (size: 8.5 KiB, free: 434.4 MiB)
+[2022-02-10 15:45:37,740] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1427
+[2022-02-10 15:45:37,761] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-02-10 15:45:37,762] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2022-02-10 15:45:37,847] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (980639fb6da9, executor driver, partition 0, ANY, 7720 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:37,867] {subprocess.py:89} INFO - 22/02/10 15:45:37 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2022-02-10 15:45:38,397] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,405] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 587 ms on 980639fb6da9 (executor driver) (1/1)
+[2022-02-10 15:45:38,407] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2022-02-10 15:45:38,412] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: ResultStage 0 (showString at NativeMethodAccessorImpl.java:0) finished in 0.878 s
+[2022-02-10 15:45:38,416] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-10 15:45:38,416] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2022-02-10 15:45:38,419] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Job 0 finished: showString at NativeMethodAccessorImpl.java:0, took 0.923868 s
+[2022-02-10 15:45:38,439] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:38,440] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Got job 1 (showString at NativeMethodAccessorImpl.java:0) with 4 output partitions
+[2022-02-10 15:45:38,440] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Final stage: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0)
+[2022-02-10 15:45:38,440] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Parents of final stage: List()
+[2022-02-10 15:45:38,440] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Missing parents: List()
+[2022-02-10 15:45:38,441] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-02-10 15:45:38,448] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 17.8 KiB, free 434.4 MiB)
+[2022-02-10 15:45:38,452] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 8.5 KiB, free 434.3 MiB)
+[2022-02-10 15:45:38,453] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 980639fb6da9:38707 (size: 8.5 KiB, free: 434.4 MiB)
+[2022-02-10 15:45:38,454] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1427
+[2022-02-10 15:45:38,455] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(1, 2, 3, 4))
+[2022-02-10 15:45:38,455] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks resource profile 0
+[2022-02-10 15:45:38,462] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (980639fb6da9, executor driver, partition 1, ANY, 8197 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,463] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (980639fb6da9, executor driver, partition 2, ANY, 6766 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,464] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (980639fb6da9, executor driver, partition 3, ANY, 8553 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,465] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4) (980639fb6da9, executor driver, partition 4, ANY, 8195 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,466] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2022-02-10 15:45:38,471] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+[2022-02-10 15:45:38,471] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+[2022-02-10 15:45:38,478] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+[2022-02-10 15:45:38,577] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,592] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 131 ms on 980639fb6da9 (executor driver) (1/4)
+[2022-02-10 15:45:38,635] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,638] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 181 ms on 980639fb6da9 (executor driver) (2/4)
+[2022-02-10 15:45:38,666] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 2.0 in stage 1.0 (TID 3). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,673] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 3) in 210 ms on 980639fb6da9 (executor driver) (3/4)
+[2022-02-10 15:45:38,674] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,677] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 212 ms on 980639fb6da9 (executor driver) (4/4)
+[2022-02-10 15:45:38,677] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2022-02-10 15:45:38,678] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0) finished in 0.234 s
+[2022-02-10 15:45:38,678] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-10 15:45:38,678] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2022-02-10 15:45:38,679] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Job 1 finished: showString at NativeMethodAccessorImpl.java:0, took 0.239575 s
+[2022-02-10 15:45:38,691] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:38,692] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Got job 2 (showString at NativeMethodAccessorImpl.java:0) with 13 output partitions
+[2022-02-10 15:45:38,692] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Final stage: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0)
+[2022-02-10 15:45:38,693] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Parents of final stage: List()
+[2022-02-10 15:45:38,693] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Missing parents: List()
+[2022-02-10 15:45:38,695] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-02-10 15:45:38,700] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 17.8 KiB, free 434.3 MiB)
+[2022-02-10 15:45:38,704] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 8.5 KiB, free 434.3 MiB)
+[2022-02-10 15:45:38,705] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 980639fb6da9:38707 (size: 8.5 KiB, free: 434.4 MiB)
+[2022-02-10 15:45:38,706] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1427
+[2022-02-10 15:45:38,707] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO DAGScheduler: Submitting 13 missing tasks from ResultStage 2 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17))
+[2022-02-10 15:45:38,707] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSchedulerImpl: Adding task set 2.0 with 13 tasks resource profile 0
+[2022-02-10 15:45:38,710] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 5) (980639fb6da9, executor driver, partition 5, ANY, 7720 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,711] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 6) (980639fb6da9, executor driver, partition 6, ANY, 7717 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,712] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 7) (980639fb6da9, executor driver, partition 7, ANY, 7483 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,713] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 8) (980639fb6da9, executor driver, partition 8, ANY, 7839 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,714] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 9) (980639fb6da9, executor driver, partition 9, ANY, 8074 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,716] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 10) (980639fb6da9, executor driver, partition 10, ANY, 8313 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,717] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 11) (980639fb6da9, executor driver, partition 11, ANY, 7480 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,718] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 12) (980639fb6da9, executor driver, partition 12, ANY, 7720 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,719] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 0.0 in stage 2.0 (TID 5)
+[2022-02-10 15:45:38,735] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 1.0 in stage 2.0 (TID 6)
+[2022-02-10 15:45:38,735] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 3.0 in stage 2.0 (TID 8)
+[2022-02-10 15:45:38,735] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 2.0 in stage 2.0 (TID 7)
+[2022-02-10 15:45:38,735] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 5.0 in stage 2.0 (TID 10)
+[2022-02-10 15:45:38,735] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 4.0 in stage 2.0 (TID 9)
+[2022-02-10 15:45:38,766] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 6.0 in stage 2.0 (TID 11)
+[2022-02-10 15:45:38,803] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 7.0 in stage 2.0 (TID 12)
+[2022-02-10 15:45:38,881] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 1.0 in stage 2.0 (TID 6). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,883] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 8.0 in stage 2.0 (TID 13) (980639fb6da9, executor driver, partition 13, ANY, 8197 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,884] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 6) in 173 ms on 980639fb6da9 (executor driver) (1/13)
+[2022-02-10 15:45:38,894] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 0.0 in stage 2.0 (TID 5). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,908] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 9.0 in stage 2.0 (TID 14) (980639fb6da9, executor driver, partition 14, ANY, 7956 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,908] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 5) in 199 ms on 980639fb6da9 (executor driver) (2/13)
+[2022-02-10 15:45:38,909] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 9.0 in stage 2.0 (TID 14)
+[2022-02-10 15:45:38,911] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 8.0 in stage 2.0 (TID 13)
+[2022-02-10 15:45:38,932] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 6.0 in stage 2.0 (TID 11). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,932] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 10.0 in stage 2.0 (TID 15) (980639fb6da9, executor driver, partition 15, ANY, 7958 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,933] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 11) in 217 ms on 980639fb6da9 (executor driver) (3/13)
+[2022-02-10 15:45:38,934] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 10.0 in stage 2.0 (TID 15)
+[2022-02-10 15:45:38,939] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 3.0 in stage 2.0 (TID 8). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,940] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 11.0 in stage 2.0 (TID 16) (980639fb6da9, executor driver, partition 16, ANY, 8433 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,941] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 2.0 in stage 2.0 (TID 7). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,941] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 8) in 228 ms on 980639fb6da9 (executor driver) (4/13)
+[2022-02-10 15:45:38,941] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 11.0 in stage 2.0 (TID 16)
+[2022-02-10 15:45:38,942] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Starting task 12.0 in stage 2.0 (TID 17) (980639fb6da9, executor driver, partition 17, ANY, 7242 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:38,942] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Running task 12.0 in stage 2.0 (TID 17)
+[2022-02-10 15:45:38,943] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 7) in 231 ms on 980639fb6da9 (executor driver) (5/13)
+[2022-02-10 15:45:38,990] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO Executor: Finished task 7.0 in stage 2.0 (TID 12). 1390 bytes result sent to driver
+[2022-02-10 15:45:38,993] {subprocess.py:89} INFO - 22/02/10 15:45:38 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 12) in 276 ms on 980639fb6da9 (executor driver) (6/13)
+[2022-02-10 15:45:39,013] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Finished task 5.0 in stage 2.0 (TID 10). 1390 bytes result sent to driver
+[2022-02-10 15:45:39,018] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 10) in 303 ms on 980639fb6da9 (executor driver) (7/13)
+[2022-02-10 15:45:39,019] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Finished task 4.0 in stage 2.0 (TID 9). 1390 bytes result sent to driver
+[2022-02-10 15:45:39,021] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 9) in 306 ms on 980639fb6da9 (executor driver) (8/13)
+[2022-02-10 15:45:39,046] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Finished task 12.0 in stage 2.0 (TID 17). 1390 bytes result sent to driver
+[2022-02-10 15:45:39,048] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Finished task 12.0 in stage 2.0 (TID 17) in 106 ms on 980639fb6da9 (executor driver) (9/13)
+[2022-02-10 15:45:39,071] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Finished task 9.0 in stage 2.0 (TID 14). 1390 bytes result sent to driver
+[2022-02-10 15:45:39,072] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Finished task 9.0 in stage 2.0 (TID 14) in 165 ms on 980639fb6da9 (executor driver) (10/13)
+[2022-02-10 15:45:39,098] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Finished task 8.0 in stage 2.0 (TID 13). 1390 bytes result sent to driver
+[2022-02-10 15:45:39,100] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Finished task 8.0 in stage 2.0 (TID 13) in 218 ms on 980639fb6da9 (executor driver) (11/13)
+[2022-02-10 15:45:39,109] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Finished task 10.0 in stage 2.0 (TID 15). 1390 bytes result sent to driver
+[2022-02-10 15:45:39,110] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Finished task 11.0 in stage 2.0 (TID 16). 1390 bytes result sent to driver
+[2022-02-10 15:45:39,113] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Finished task 10.0 in stage 2.0 (TID 15) in 180 ms on 980639fb6da9 (executor driver) (12/13)
+[2022-02-10 15:45:39,113] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Finished task 11.0 in stage 2.0 (TID 16) in 173 ms on 980639fb6da9 (executor driver) (13/13)
+[2022-02-10 15:45:39,113] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+[2022-02-10 15:45:39,115] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0) finished in 0.417 s
+[2022-02-10 15:45:39,115] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-10 15:45:39,115] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+[2022-02-10 15:45:39,115] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Job 2 finished: showString at NativeMethodAccessorImpl.java:0, took 0.424171 s
+[2022-02-10 15:45:39,124] {subprocess.py:89} INFO - +---------+-----------+-------------+---------+--------+
+[2022-02-10 15:45:39,124] {subprocess.py:89} INFO - |job_title|employee_id|employee_name|first_day|last_day|
+[2022-02-10 15:45:39,124] {subprocess.py:89} INFO - +---------+-----------+-------------+---------+--------+
+[2022-02-10 15:45:39,124] {subprocess.py:89} INFO - +---------+-----------+-------------+---------+--------+
+[2022-02-10 15:45:39,124] {subprocess.py:89} INFO - 
+[2022-02-10 15:45:39,229] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO InMemoryFileIndex: It took 23 ms to list leaf files for 1 paths.
+[2022-02-10 15:45:39,308] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO InMemoryFileIndex: It took 3 ms to list leaf files for 1 paths.
+[2022-02-10 15:45:39,660] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO FileSourceStrategy: Pushed Filters:
+[2022-02-10 15:45:39,661] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#36, None)) > 0)
+[2022-02-10 15:45:39,664] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+[2022-02-10 15:45:39,719] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO CodeGenerator: Code generated in 18.171606 ms
+[2022-02-10 15:45:39,746] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 199.8 KiB, free 434.1 MiB)
+[2022-02-10 15:45:39,784] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 35.8 KiB, free 434.1 MiB)
+[2022-02-10 15:45:39,785] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 980639fb6da9:38707 (size: 35.8 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:39,787] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO SparkContext: Created broadcast 3 from load at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:39,798] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-02-10 15:45:39,862] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO SparkContext: Starting job: load at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:39,863] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Got job 3 (load at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-02-10 15:45:39,863] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Final stage: ResultStage 3 (load at NativeMethodAccessorImpl.java:0)
+[2022-02-10 15:45:39,864] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Parents of final stage: List()
+[2022-02-10 15:45:39,864] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Missing parents: List()
+[2022-02-10 15:45:39,864] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[7] at load at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-02-10 15:45:39,882] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 11.6 KiB, free 434.1 MiB)
+[2022-02-10 15:45:39,886] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 434.1 MiB)
+[2022-02-10 15:45:39,887] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 980639fb6da9:38707 (size: 5.8 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:39,887] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1427
+[2022-02-10 15:45:39,888] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[7] at load at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-02-10 15:45:39,888] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+[2022-02-10 15:45:39,893] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 18) (980639fb6da9, executor driver, partition 0, PROCESS_LOCAL, 4889 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:39,895] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO Executor: Running task 0.0 in stage 3.0 (TID 18)
+[2022-02-10 15:45:39,961] {subprocess.py:89} INFO - 22/02/10 15:45:39 INFO FileScanRDD: Reading File path: file:///usr/local/spark/data/previous_employees_by_job_title.txt, range: 0-4194304, partition values: [empty row]
+[2022-02-10 15:45:40,002] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO CodeGenerator: Code generated in 32.755732 ms
+[2022-02-10 15:45:40,047] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO Executor: Finished task 0.0 in stage 3.0 (TID 18). 1557 bytes result sent to driver
+[2022-02-10 15:45:40,049] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 18) in 160 ms on 980639fb6da9 (executor driver) (1/1)
+[2022-02-10 15:45:40,050] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2022-02-10 15:45:40,052] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: ResultStage 3 (load at NativeMethodAccessorImpl.java:0) finished in 0.184 s
+[2022-02-10 15:45:40,052] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-10 15:45:40,052] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+[2022-02-10 15:45:40,052] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Job 3 finished: load at NativeMethodAccessorImpl.java:0, took 0.189284 s
+[2022-02-10 15:45:40,079] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO CodeGenerator: Code generated in 14.300507 ms
+[2022-02-10 15:45:40,142] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceStrategy: Pushed Filters:
+[2022-02-10 15:45:40,142] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceStrategy: Post-Scan Filters:
+[2022-02-10 15:45:40,142] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+[2022-02-10 15:45:40,152] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 199.8 KiB, free 433.9 MiB)
+[2022-02-10 15:45:40,172] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 35.8 KiB, free 433.8 MiB)
+[2022-02-10 15:45:40,175] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 980639fb6da9:38707 (size: 35.8 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:40,176] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO SparkContext: Created broadcast 5 from load at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:40,178] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-02-10 15:45:40,415] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceStrategy: Pushed Filters:
+[2022-02-10 15:45:40,415] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceStrategy: Post-Scan Filters:
+[2022-02-10 15:45:40,415] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceStrategy: Output Data Schema: struct<job_title: string, employee_id: string, employee_name: string, first_day: string, last_day: string ... 3 more fields>
+[2022-02-10 15:45:40,433] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 199.7 KiB, free 433.7 MiB)
+[2022-02-10 15:45:40,452] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 35.9 KiB, free 433.6 MiB)
+[2022-02-10 15:45:40,453] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 980639fb6da9:38707 (size: 35.9 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:40,454] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO SparkContext: Created broadcast 6 from save at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:40,458] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-02-10 15:45:40,468] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO AppendDataExec: Start processing data source write support: CassandraBulkWrite(org.apache.spark.sql.SparkSession@3eb7f9fc,com.datastax.spark.connector.cql.CassandraConnector@6780200a,TableDef(test,previous_employees_by_job_title,ArrayBuffer(ColumnDef(job_title,PartitionKeyColumn,VarCharType)),ArrayBuffer(ColumnDef(employee_id,ClusteringColumn(0,ASC),UUIDType)),Stream(ColumnDef(employee_name,RegularColumn,VarCharType), ColumnDef(first_day,RegularColumn,TimestampType), ColumnDef(last_day,RegularColumn,TimestampType)),Stream(),false,false,Map()),WriteConf(BytesInBatch(1024),1000,Partition,LOCAL_QUORUM,false,false,5,None,TTLOption(DefaultValue),TimestampOption(DefaultValue),true,None),StructType(StructField(job_title,StringType,true), StructField(employee_id,StringType,true), StructField(employee_name,StringType,true), StructField(first_day,StringType,true), StructField(last_day,StringType,true)),org.apache.spark.SparkConf@288b8c65). The input RDD has 3 partitions.
+[2022-02-10 15:45:40,486] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO SparkContext: Starting job: save at NativeMethodAccessorImpl.java:0
+[2022-02-10 15:45:40,487] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Got job 4 (save at NativeMethodAccessorImpl.java:0) with 3 output partitions
+[2022-02-10 15:45:40,488] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Final stage: ResultStage 4 (save at NativeMethodAccessorImpl.java:0)
+[2022-02-10 15:45:40,488] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Parents of final stage: List()
+[2022-02-10 15:45:40,488] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Missing parents: List()
+[2022-02-10 15:45:40,489] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[15] at save at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-02-10 15:45:40,500] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 16.5 KiB, free 433.6 MiB)
+[2022-02-10 15:45:40,505] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 8.6 KiB, free 433.6 MiB)
+[2022-02-10 15:45:40,506] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 980639fb6da9:38707 (size: 8.6 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:40,507] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1427
+[2022-02-10 15:45:40,508] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 4 (MapPartitionsRDD[15] at save at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2))
+[2022-02-10 15:45:40,509] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO TaskSchedulerImpl: Adding task set 4.0 with 3 tasks resource profile 0
+[2022-02-10 15:45:40,511] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 19) (980639fb6da9, executor driver, partition 0, PROCESS_LOCAL, 4889 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:40,511] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 20) (980639fb6da9, executor driver, partition 1, PROCESS_LOCAL, 4889 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:40,512] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 21) (980639fb6da9, executor driver, partition 2, PROCESS_LOCAL, 4889 bytes) taskResourceAssignments Map()
+[2022-02-10 15:45:40,514] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO Executor: Running task 0.0 in stage 4.0 (TID 19)
+[2022-02-10 15:45:40,514] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO Executor: Running task 2.0 in stage 4.0 (TID 21)
+[2022-02-10 15:45:40,514] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO Executor: Running task 1.0 in stage 4.0 (TID 20)
+[2022-02-10 15:45:40,615] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileScanRDD: Reading File path: file:///usr/local/spark/data/previous_employees_by_job_title.txt, range: 0-4194304, partition values: [empty row]
+[2022-02-10 15:45:40,615] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileScanRDD: Reading File path: file:///usr/local/spark/data/previous_employees_by_job_title.txt, range: 8388608-10679070, partition values: [empty row]
+[2022-02-10 15:45:40,620] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO FileScanRDD: Reading File path: file:///usr/local/spark/data/previous_employees_by_job_title.txt, range: 4194304-8388608, partition values: [empty row]
+[2022-02-10 15:45:40,652] {subprocess.py:89} INFO - 22/02/10 15:45:40 INFO CodeGenerator: Code generated in 27.525321 ms
+[2022-02-10 15:45:41,083] {subprocess.py:89} INFO - 22/02/10 15:45:41 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 980639fb6da9:38707 in memory (size: 8.5 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:41,175] {subprocess.py:89} INFO - 22/02/10 15:45:41 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 980639fb6da9:38707 in memory (size: 8.5 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:41,307] {subprocess.py:89} INFO - 22/02/10 15:45:41 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 980639fb6da9:38707 in memory (size: 35.8 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:41,375] {subprocess.py:89} INFO - 22/02/10 15:45:41 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 980639fb6da9:38707 in memory (size: 5.8 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:41,572] {subprocess.py:89} INFO - 22/02/10 15:45:41 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 980639fb6da9:38707 in memory (size: 8.5 KiB, free: 434.3 MiB)
+[2022-02-10 15:45:41,639] {subprocess.py:89} INFO - 22/02/10 15:45:41 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 980639fb6da9:38707 in memory (size: 35.8 KiB, free: 434.4 MiB)
+[2022-02-10 15:45:48,239] {subprocess.py:89} INFO - 22/02/10 15:45:48 INFO DataWritingSparkTask: Commit authorized for partition 2 (task 21, attempt 0, stage 4.0)
+[2022-02-10 15:45:48,345] {subprocess.py:89} INFO - 22/02/10 15:45:48 INFO DataWritingSparkTask: Committed partition 2 (task 21, attempt 0, stage 4.0)
+[2022-02-10 15:45:48,366] {subprocess.py:89} INFO - 22/02/10 15:45:48 INFO Executor: Finished task 2.0 in stage 4.0 (TID 21). 1507 bytes result sent to driver
+[2022-02-10 15:45:48,371] {subprocess.py:89} INFO - 22/02/10 15:45:48 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 21) in 7857 ms on 980639fb6da9 (executor driver) (1/3)
+[2022-02-10 15:45:49,776] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO DataWritingSparkTask: Commit authorized for partition 1 (task 20, attempt 0, stage 4.0)
+[2022-02-10 15:45:49,790] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 19, attempt 0, stage 4.0)
+[2022-02-10 15:45:49,806] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO DataWritingSparkTask: Committed partition 1 (task 20, attempt 0, stage 4.0)
+[2022-02-10 15:45:49,808] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO Executor: Finished task 1.0 in stage 4.0 (TID 20). 1464 bytes result sent to driver
+[2022-02-10 15:45:49,809] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 20) in 9298 ms on 980639fb6da9 (executor driver) (2/3)
+[2022-02-10 15:45:49,828] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO DataWritingSparkTask: Committed partition 0 (task 19, attempt 0, stage 4.0)
+[2022-02-10 15:45:49,830] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO Executor: Finished task 0.0 in stage 4.0 (TID 19). 1464 bytes result sent to driver
+[2022-02-10 15:45:49,831] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 19) in 9321 ms on 980639fb6da9 (executor driver) (3/3)
+[2022-02-10 15:45:49,831] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool
+[2022-02-10 15:45:49,833] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO DAGScheduler: ResultStage 4 (save at NativeMethodAccessorImpl.java:0) finished in 9.342 s
+[2022-02-10 15:45:49,833] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-10 15:45:49,833] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+[2022-02-10 15:45:49,834] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO DAGScheduler: Job 4 finished: save at NativeMethodAccessorImpl.java:0, took 9.346653 s
+[2022-02-10 15:45:49,837] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO AppendDataExec: Data source write support CassandraBulkWrite(org.apache.spark.sql.SparkSession@3eb7f9fc,com.datastax.spark.connector.cql.CassandraConnector@6780200a,TableDef(test,previous_employees_by_job_title,ArrayBuffer(ColumnDef(job_title,PartitionKeyColumn,VarCharType)),ArrayBuffer(ColumnDef(employee_id,ClusteringColumn(0,ASC),UUIDType)),Stream(ColumnDef(employee_name,RegularColumn,VarCharType), ColumnDef(first_day,RegularColumn,TimestampType), ColumnDef(last_day,RegularColumn,TimestampType)),Stream(),false,false,Map()),WriteConf(BytesInBatch(1024),1000,Partition,LOCAL_QUORUM,false,false,5,None,TTLOption(DefaultValue),TimestampOption(DefaultValue),true,None),StructType(StructField(job_title,StringType,true), StructField(employee_id,StringType,true), StructField(employee_name,StringType,true), StructField(first_day,StringType,true), StructField(last_day,StringType,true)),org.apache.spark.SparkConf@288b8c65) is committing.
+[2022-02-10 15:45:49,838] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO AppendDataExec: Data source write support CassandraBulkWrite(org.apache.spark.sql.SparkSession@3eb7f9fc,com.datastax.spark.connector.cql.CassandraConnector@6780200a,TableDef(test,previous_employees_by_job_title,ArrayBuffer(ColumnDef(job_title,PartitionKeyColumn,VarCharType)),ArrayBuffer(ColumnDef(employee_id,ClusteringColumn(0,ASC),UUIDType)),Stream(ColumnDef(employee_name,RegularColumn,VarCharType), ColumnDef(first_day,RegularColumn,TimestampType), ColumnDef(last_day,RegularColumn,TimestampType)),Stream(),false,false,Map()),WriteConf(BytesInBatch(1024),1000,Partition,LOCAL_QUORUM,false,false,5,None,TTLOption(DefaultValue),TimestampOption(DefaultValue),true,None),StructType(StructField(job_title,StringType,true), StructField(employee_id,StringType,true), StructField(employee_name,StringType,true), StructField(first_day,StringType,true), StructField(last_day,StringType,true)),org.apache.spark.SparkConf@288b8c65) committed.
+[2022-02-10 15:45:49,873] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO SparkUI: Stopped Spark web UI at http://980639fb6da9:4040
+[2022-02-10 15:45:49,930] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2022-02-10 15:45:49,967] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO MemoryStore: MemoryStore cleared
+[2022-02-10 15:45:49,968] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO BlockManager: BlockManager stopped
+[2022-02-10 15:45:49,972] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2022-02-10 15:45:49,974] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2022-02-10 15:45:49,983] {subprocess.py:89} INFO - 22/02/10 15:45:49 INFO SparkContext: Successfully stopped SparkContext
+[2022-02-10 15:45:50,067] {subprocess.py:89} INFO - 22/02/10 15:45:50 INFO ShutdownHookManager: Shutdown hook called
+[2022-02-10 15:45:50,067] {subprocess.py:89} INFO - 22/02/10 15:45:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44/pyspark-4cc73aeb-bf99-43c7-8ba0-3003beee0285
+[2022-02-10 15:45:50,071] {subprocess.py:89} INFO - 22/02/10 15:45:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-15ce3a5c-9396-4dfc-98e9-a00f6cc56b79
+[2022-02-10 15:45:50,075] {subprocess.py:89} INFO - 22/02/10 15:45:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-6f301523-20b8-42b9-8e8a-a4d90109cb44
+[2022-02-10 15:45:50,092] {subprocess.py:89} INFO - 22/02/10 15:45:50 INFO CassandraConnector: Disconnected from Cassandra cluster.
+[2022-02-10 15:45:50,093] {subprocess.py:89} INFO - 22/02/10 15:45:50 INFO SerialShutdownHooks: Successfully executed shutdown hook: Clearing session cache for C* connector
+[2022-02-10 15:45:50,162] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-02-10 15:45:50,188] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=spark-test-cassandra, task_id=load_and_write_job, execution_date=20220210T154205, start_date=20220210T154521, end_date=20220210T154550
+[2022-02-10 15:45:50,231] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-10 15:45:50,260] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

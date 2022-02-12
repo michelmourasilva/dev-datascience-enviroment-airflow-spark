@@ -1,0 +1,1 @@
+{"id":"F5oP09agVfrJy7lD","body":"-- modify keyspace name\nCREATE KEYSPACE keyspace_name\n\tWITH REPLICATION = {\n\t\t'class': 'SimpleStrategy',\n\t\t'replication_factor': 1\n\t}\n\tAND DURABLE_WRITES = true;\n","filename":"script_2.cql","clusterName":"Cluster PasswordAuthenticator","keyspace":"test","source":"action","modified":true}

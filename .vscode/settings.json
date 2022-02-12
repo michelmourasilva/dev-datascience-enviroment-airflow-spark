@@ -1,0 +1,10 @@
+{
+    "jupyter.jupyterServerType": "remote",
+    "cassandraWorkbench.activeClusterName": "Cluster PasswordAuthenticator",
+    "cassandraWorkbench.activeKeyspace": [
+        [
+            "Cluster PasswordAuthenticator",
+            "test"
+        ]
+    ]
+}

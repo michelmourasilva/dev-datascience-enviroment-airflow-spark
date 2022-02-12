@@ -1,0 +1,288 @@
+version: '3'
+
+x-airflow-common:
+  &airflow-common
+#  image: apache/airflow:2.2.3
+  build: 
+      context: .
+      dockerfile: Dockerfile_airflow
+  environment:
+    &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@172.20.0.2/airflow
+    AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@172.20.0.2/airflow
+    AIRFLOW__CELERY__BROKER_URL: redis://:@172.20.0.3:6379/0
+    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'true'
+    AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
+    ADDITIONAL_AIRFLOW_EXTRAS: apache.spark
+    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- ipython ipykernel apache-airflow-providers-papermill==2.2.0 pyspark==3.2.0 apache-airflow-providers-apache-spark } #Adding the Spark provider in Airflow	
+  volumes:
+    - ./notebooks:/usr/local/spark/notebooks
+    - ./dags:/opt/airflow/dags
+    - ./spark-apps:/usr/local/spark/app
+    - ./logs:/opt/airflow/logs
+#    - ./plugins:/opt/airflow/plugins
+    - ./data:/usr/local/spark/data
+  user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"  
+  command:      
+    - /bin/bash
+    - -c
+    - |
+      airflow connections add "spark_default" --conn-host "spark://172.20.0.9:7077" --conn-type "spark"     
+      ipython kernel install --name "python3"
+#  command: ipython kernel install --name "python3"
+  depends_on:
+    redis:
+      condition: service_healthy
+    postgres:
+      condition: service_healthy
+  networks:
+    banestes_network:
+      ipv4_address: 172.20.0.7
+
+services:
+
+  postgres:
+    image: postgres:13
+    container_name: datalake_postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+    restart: always
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.2
+
+  redis:
+    image: redis:latest
+    container_name: datalake_redis
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 30s
+      retries: 50
+    restart: always
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.3
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: datalake_airflow
+    command: webserver
+    ports:
+      - '8282:8080'
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://1ocalhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: always
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.4
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: datalake_scheduler
+    command: scheduler
+    restart: always
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.5
+
+  airflow-worker:
+    <<: *airflow-common
+    container_name: datalake_airflow-worker
+    command: celery worker
+    restart: always
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.6
+
+  airflow-init:
+    <<: *airflow-common
+    container_name: datalake_init    
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_UPGRADE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
+    command: version    
+   
+
+  flower:
+    <<: *airflow-common
+    container_name: datalake_flower
+    command: celery flower
+    ports:
+      - 5555:5555
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:5555/"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    restart: always
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.8
+
+  spark:
+    image: bitnami/spark:3.2.0
+    container_name: datalake_spark
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./notebooks:/usr/local/spark/notebooks    
+      - ./spark-apps:/usr/local/spark/app
+      - ./data:/usr/local/spark/data
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.9
+
+  spark-worker:
+    image: bitnami/spark:3.2.0
+    container_name: datalake_spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=10G
+      - SPARK_WORKER_CORES=4
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+    - '8081:8081'
+    volumes:
+      - ./notebooks:/usr/local/spark/notebooks        
+      - ./spark-apps:/usr/local/spark/app
+      - ./data:/usr/local/spark/data
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.10
+
+  cassandra:    
+    image: bitnami/cassandra:3.11.6
+    container_name: datalake_cassandra
+    ports:
+      - "7005:7000"
+      - "9042:9042"
+#    volumes:
+#      - ./cassandra_data:/bitnami/cassandra/data/data/
+    healthcheck:
+      test: ["CMD-SHELL", "[ $$(nodetool statusgossip) = running ]"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    environment:
+        - CASSANDRA_USER=cassandra
+        - CASSANDRA_PASSWORD=cassandra
+        - CASSANDRA_PASSWORD_SEEDER=yes
+        - CASSANDRA_SEEDS=cassandra
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.11
+
+  cassandra_web:
+    image: delermando/docker-cassandra-web:v0.4.0
+    container_name: datalake_cassandra-web
+    ports:
+      - "3000:3000"
+    environment:
+        - CASSANDRA_HOST_IP=172.20.0.11
+        - CASSANDRA_PORT=9042
+        - CASSANDRA_USER=cassandra
+        - CASSANDRA_PASSWORD=cassandra
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.12
+
+  jupyterlab:
+    build: 
+      context: .
+      dockerfile: Dockerfile_jupyterlab
+    container_name: datalake_jupyterlab
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/usr/local/spark/data
+      - ./:/workspace
+      - ./data/jupyter_runtime:/home/jovyan/.local/share/jupyter/runtime
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.13
+    command: "start-notebook.sh --NotebookApp.token='datalake' --NotebookApp.password='datalake'"
+
+  minio:
+    image: minio/minio
+    container_name: datalake_minio    
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./data:/data
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://172.20.0.14:9000/"]
+      interval: 10s
+      timeout: 10s
+      retries: 5      
+    networks:
+      banestes_network:
+        ipv4_address: 172.20.0.14      
+    environment:
+      - "MINIO_ACCESS_KEY=minio"
+      - "MINIO_SECRET_KEY=minio123"
+    command: server /data
+
+# migration minior
+  createbuckets:
+    image: minio/mc
+    container_name: datalake_miniomc    
+    depends_on:
+      minio:
+        condition: service_healthy
+    restart: always      
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set myminio http://minio:9000 minio minio123;
+      /usr/bin/mc mb myminio/test-bucket;
+      /usr/bin/mc policy set public myminio/test-bucket;
+      exit 0;
+      "
+
+volumes:
+  postgres-db-volume:
+#  cassandra_data:
+#    driver: local
+
+networks:
+  banestes_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24
+          gateway: 172.20.0.1

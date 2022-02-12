@@ -1,0 +1,1 @@
+{"id":"FuUr3c1J9iRdx8Gv","body":"  SELECT job_title, employee_id, days_worked, employee_name\n  FROM test.days_worked_by_previous_employees_by_job_title","filename":"script_1.cql","clusterName":"Cluster PasswordAuthenticator","keyspace":"test","source":"action","modified":true}
