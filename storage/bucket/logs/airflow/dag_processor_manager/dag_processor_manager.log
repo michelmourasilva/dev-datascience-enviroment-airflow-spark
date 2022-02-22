@@ -31290,3 +31290,171 @@ File Path                                                PID    Runtime      # D
 /opt/airflow/dags/configuration_dag.py                                            1           0  0.09s           2022-02-22T02:58:19
 /opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.65s           2022-02-22T02:58:19
 ================================================================================
+[2022-02-22 02:58:28,952] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:58:28,952] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:53:28.952535+00:00
+[2022-02-22 02:58:38,980] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:58:38,980] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:53:38.980764+00:00
+[2022-02-22 02:58:49,005] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:58:49,005] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:53:49.005198+00:00
+[2022-02-22 02:58:51,665] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py                            1           0  1.00s           2022-02-22T02:58:50
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.63s           2022-02-22T02:58:51
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.11s           2022-02-22T02:58:50
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.12s           2022-02-22T02:58:50
+/opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.58s           2022-02-22T02:58:50
+================================================================================
+[2022-02-22 02:58:59,124] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:58:59,124] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:53:59.124845+00:00
+[2022-02-22 02:59:08,149] {manager.py:663} INFO - Searching for files in /opt/airflow/dags
+[2022-02-22 02:59:08,150] {manager.py:666} INFO - There are 5 files in /opt/airflow/dags
+[2022-02-22 02:59:09,169] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:59:09,169] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:54:09.169933+00:00
+[2022-02-22 02:59:19,198] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:59:19,198] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:54:19.198660+00:00
+[2022-02-22 02:59:21,866] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py                            1           0  0.74s           2022-02-22T02:59:21
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.48s           2022-02-22T02:59:21
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.08s           2022-02-22T02:59:21
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.07s           2022-02-22T02:59:21
+/opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.51s           2022-02-22T02:59:21
+================================================================================
+[2022-02-22 02:59:29,462] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:59:29,462] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:54:29.462694+00:00
+[2022-02-22 02:59:39,491] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:59:39,491] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:54:39.491575+00:00
+[2022-02-22 02:59:49,513] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:59:49,513] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:54:49.513444+00:00
+[2022-02-22 02:59:51,922] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py    1660  0.39s             1           0  0.74s           2022-02-22T02:59:21
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.48s           2022-02-22T02:59:21
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.08s           2022-02-22T02:59:21
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.07s           2022-02-22T02:59:21
+/opt/airflow/dags/cassandra_create_test_database_dag.py   1661  0.39s             1           0  0.51s           2022-02-22T02:59:21
+================================================================================
+[2022-02-22 02:59:59,703] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 02:59:59,703] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:54:59.703503+00:00
+[2022-02-22 03:00:09,727] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:00:09,727] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:55:09.727335+00:00
+[2022-02-22 03:00:19,750] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:00:19,750] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:55:19.750190+00:00
+[2022-02-22 03:00:22,324] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py    1687  0.01s             1           0  0.73s           2022-02-22T02:59:52
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.49s           2022-02-22T02:59:52
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.09s           2022-02-22T02:59:52
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.08s           2022-02-22T02:59:52
+/opt/airflow/dags/cassandra_create_test_database_dag.py   1688  0.00s             1           0  0.50s           2022-02-22T02:59:52
+================================================================================
+[2022-02-22 03:00:30,128] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:00:30,128] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:55:30.128977+00:00
+[2022-02-22 03:00:40,154] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:00:40,154] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:55:40.154919+00:00
+[2022-02-22 03:00:50,178] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:00:50,178] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:55:50.178707+00:00
+[2022-02-22 03:00:52,549] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py                            1           0  0.80s           2022-02-22T03:00:23
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.47s           2022-02-22T03:00:23
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.08s           2022-02-22T03:00:23
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.09s           2022-02-22T03:00:22
+/opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.55s           2022-02-22T03:00:22
+================================================================================
+[2022-02-22 03:01:00,317] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:01:00,318] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:56:00.318193+00:00
+[2022-02-22 03:01:10,347] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:01:10,347] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:56:10.347234+00:00
+[2022-02-22 03:01:20,379] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:01:20,380] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:56:20.379985+00:00
+[2022-02-22 03:01:22,710] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py                            1           0  1.11s           2022-02-22T03:00:54
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.50s           2022-02-22T03:00:54
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.10s           2022-02-22T03:00:54
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.15s           2022-02-22T03:00:54
+/opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.71s           2022-02-22T03:00:53
+================================================================================
+[2022-02-22 03:01:30,586] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:01:30,586] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:56:30.586962+00:00
+[2022-02-22 03:01:40,613] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:01:40,613] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:56:40.613365+00:00
+[2022-02-22 03:01:50,636] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:01:50,636] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:56:50.636628+00:00
+[2022-02-22 03:01:53,182] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py                            1           0  0.74s           2022-02-22T03:01:25
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.49s           2022-02-22T03:01:25
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.08s           2022-02-22T03:01:25
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.07s           2022-02-22T03:01:25
+/opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.52s           2022-02-22T03:01:24
+================================================================================
+[2022-02-22 03:02:00,995] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:02:00,995] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:57:00.995343+00:00
+[2022-02-22 03:02:11,025] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:02:11,025] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:57:11.025371+00:00
+[2022-02-22 03:02:21,050] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:02:21,050] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:57:21.050669+00:00
+[2022-02-22 03:02:23,422] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py                            1           0  0.80s           2022-02-22T03:01:55
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.48s           2022-02-22T03:01:56
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.09s           2022-02-22T03:01:55
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.07s           2022-02-22T03:01:55
+/opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.54s           2022-02-22T03:01:55
+================================================================================
+[2022-02-22 03:02:31,286] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:02:31,286] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:57:31.286297+00:00
+[2022-02-22 03:02:41,310] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:02:41,310] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:57:41.310224+00:00
+[2022-02-22 03:02:51,338] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:02:51,338] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:57:51.338239+00:00
+[2022-02-22 03:02:54,017] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark-cassandra-dag_withPapermill.py                            1           0  0.90s           2022-02-22T03:02:26
+/opt/airflow/dags/spark-cassandra-dag.py                                          1           0  0.44s           2022-02-22T03:02:27
+/opt/airflow/dags/spark-dag.py                                                    1           0  0.08s           2022-02-22T03:02:26
+/opt/airflow/dags/configuration_dag.py                                            1           0  0.07s           2022-02-22T03:02:26
+/opt/airflow/dags/cassandra_create_test_database_dag.py                           1           0  0.62s           2022-02-22T03:02:26
+================================================================================
+[2022-02-22 03:03:01,439] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:03:01,439] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:58:01.439271+00:00
+[2022-02-22 03:03:11,464] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-22 03:03:11,464] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-22 02:58:11.464392+00:00

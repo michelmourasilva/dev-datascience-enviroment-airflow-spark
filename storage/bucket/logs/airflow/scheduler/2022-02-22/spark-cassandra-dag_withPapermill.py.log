@@ -1304,3 +1304,66 @@
 [2022-02-22 02:58:19,541] {logging_mixin.py:109} INFO - [2022-02-22 02:58:19,540] {dag.py:2396} INFO - Sync 1 DAGs
 [2022-02-22 02:58:19,568] {logging_mixin.py:109} INFO - [2022-02-22 02:58:19,568] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
 [2022-02-22 02:58:19,582] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.937 seconds
+[2022-02-22 02:58:49,670] {processor.py:163} INFO - Started process (PID=1606) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:58:49,671] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 02:58:49,672] {logging_mixin.py:109} INFO - [2022-02-22 02:58:49,672] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:58:50,552] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:58:50,567] {logging_mixin.py:109} INFO - [2022-02-22 02:58:50,566] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 02:58:50,603] {logging_mixin.py:109} INFO - [2022-02-22 02:58:50,603] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 02:58:50,638] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.972 seconds
+[2022-02-22 02:59:20,718] {processor.py:163} INFO - Started process (PID=1633) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:59:20,719] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 02:59:20,720] {logging_mixin.py:109} INFO - [2022-02-22 02:59:20,720] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:59:21,397] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:59:21,407] {logging_mixin.py:109} INFO - [2022-02-22 02:59:21,407] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 02:59:21,423] {logging_mixin.py:109} INFO - [2022-02-22 02:59:21,423] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 02:59:21,432] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.717 seconds
+[2022-02-22 02:59:51,539] {processor.py:163} INFO - Started process (PID=1660) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:59:51,539] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 02:59:51,540] {logging_mixin.py:109} INFO - [2022-02-22 02:59:51,540] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:59:52,214] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 02:59:52,225] {logging_mixin.py:109} INFO - [2022-02-22 02:59:52,225] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 02:59:52,242] {logging_mixin.py:109} INFO - [2022-02-22 02:59:52,242] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 02:59:52,251] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.716 seconds
+[2022-02-22 03:00:22,322] {processor.py:163} INFO - Started process (PID=1687) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:00:22,323] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 03:00:22,323] {logging_mixin.py:109} INFO - [2022-02-22 03:00:22,323] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:00:23,057] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:00:23,068] {logging_mixin.py:109} INFO - [2022-02-22 03:00:23,067] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:00:23,084] {logging_mixin.py:109} INFO - [2022-02-22 03:00:23,083] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 03:00:23,097] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.778 seconds
+[2022-02-22 03:00:53,204] {processor.py:163} INFO - Started process (PID=1714) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:00:53,205] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 03:00:53,206] {logging_mixin.py:109} INFO - [2022-02-22 03:00:53,206] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:00:54,225] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:00:54,239] {logging_mixin.py:109} INFO - [2022-02-22 03:00:54,238] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:00:54,264] {logging_mixin.py:109} INFO - [2022-02-22 03:00:54,264] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 03:00:54,288] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 1.088 seconds
+[2022-02-22 03:01:24,408] {processor.py:163} INFO - Started process (PID=1741) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:01:24,409] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 03:01:24,409] {logging_mixin.py:109} INFO - [2022-02-22 03:01:24,409] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:01:25,083] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:01:25,095] {logging_mixin.py:109} INFO - [2022-02-22 03:01:25,094] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:01:25,113] {logging_mixin.py:109} INFO - [2022-02-22 03:01:25,113] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 03:01:25,122] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.717 seconds
+[2022-02-22 03:01:55,193] {processor.py:163} INFO - Started process (PID=1768) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:01:55,194] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 03:01:55,195] {logging_mixin.py:109} INFO - [2022-02-22 03:01:55,195] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:01:55,921] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:01:55,934] {logging_mixin.py:109} INFO - [2022-02-22 03:01:55,933] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:01:55,958] {logging_mixin.py:109} INFO - [2022-02-22 03:01:55,957] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 03:01:55,969] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.778 seconds
+[2022-02-22 03:02:26,077] {processor.py:163} INFO - Started process (PID=1795) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:02:26,078] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 03:02:26,078] {logging_mixin.py:109} INFO - [2022-02-22 03:02:26,078] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:02:26,870] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:02:26,882] {logging_mixin.py:109} INFO - [2022-02-22 03:02:26,881] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:02:26,904] {logging_mixin.py:109} INFO - [2022-02-22 03:02:26,904] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 03:02:26,948] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.874 seconds
+[2022-02-22 03:02:57,032] {processor.py:163} INFO - Started process (PID=1822) to work on /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:02:57,033] {processor.py:642} INFO - Processing file /opt/airflow/dags/spark-cassandra-dag_withPapermill.py for tasks to queue
+[2022-02-22 03:02:57,033] {logging_mixin.py:109} INFO - [2022-02-22 03:02:57,033] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:02:57,844] {processor.py:654} INFO - DAG(s) dict_keys(['spark-test-cassandra-papermill']) retrieved from /opt/airflow/dags/spark-cassandra-dag_withPapermill.py
+[2022-02-22 03:02:57,854] {logging_mixin.py:109} INFO - [2022-02-22 03:02:57,854] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:02:57,872] {logging_mixin.py:109} INFO - [2022-02-22 03:02:57,872] {dag.py:2935} INFO - Setting next_dagrun for spark-test-cassandra-papermill to None
+[2022-02-22 03:02:57,881] {processor.py:171} INFO - Processing /opt/airflow/dags/spark-cassandra-dag_withPapermill.py took 0.852 seconds

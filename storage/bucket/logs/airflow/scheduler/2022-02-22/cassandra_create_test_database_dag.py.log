@@ -1311,3 +1311,66 @@
 [2022-02-22 02:58:19,189] {logging_mixin.py:109} INFO - [2022-02-22 02:58:19,188] {dag.py:2396} INFO - Sync 1 DAGs
 [2022-02-22 02:58:19,259] {logging_mixin.py:109} INFO - [2022-02-22 02:58:19,256] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
 [2022-02-22 02:58:19,277] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.627 seconds
+[2022-02-22 02:58:49,675] {processor.py:163} INFO - Started process (PID=1607) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:58:49,677] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 02:58:49,678] {logging_mixin.py:109} INFO - [2022-02-22 02:58:49,678] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:58:50,161] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:58:50,174] {logging_mixin.py:109} INFO - [2022-02-22 02:58:50,173] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 02:58:50,200] {logging_mixin.py:109} INFO - [2022-02-22 02:58:50,200] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 02:58:50,211] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.540 seconds
+[2022-02-22 02:59:20,722] {processor.py:163} INFO - Started process (PID=1634) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:59:20,723] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 02:59:20,724] {logging_mixin.py:109} INFO - [2022-02-22 02:59:20,724] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:59:21,163] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:59:21,179] {logging_mixin.py:109} INFO - [2022-02-22 02:59:21,178] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 02:59:21,208] {logging_mixin.py:109} INFO - [2022-02-22 02:59:21,208] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 02:59:21,219] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.500 seconds
+[2022-02-22 02:59:51,543] {processor.py:163} INFO - Started process (PID=1661) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:59:51,544] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 02:59:51,544] {logging_mixin.py:109} INFO - [2022-02-22 02:59:51,544] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:59:51,971] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 02:59:51,988] {logging_mixin.py:109} INFO - [2022-02-22 02:59:51,987] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 02:59:52,017] {logging_mixin.py:109} INFO - [2022-02-22 02:59:52,017] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 02:59:52,027] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.487 seconds
+[2022-02-22 03:00:22,327] {processor.py:163} INFO - Started process (PID=1688) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:00:22,328] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 03:00:22,329] {logging_mixin.py:109} INFO - [2022-02-22 03:00:22,329] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:00:22,794] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:00:22,811] {logging_mixin.py:109} INFO - [2022-02-22 03:00:22,810] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:00:22,839] {logging_mixin.py:109} INFO - [2022-02-22 03:00:22,838] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 03:00:22,853] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.528 seconds
+[2022-02-22 03:00:53,217] {processor.py:163} INFO - Started process (PID=1715) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:00:53,218] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 03:00:53,219] {logging_mixin.py:109} INFO - [2022-02-22 03:00:53,219] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:00:53,821] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:00:53,835] {logging_mixin.py:109} INFO - [2022-02-22 03:00:53,834] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:00:53,860] {logging_mixin.py:109} INFO - [2022-02-22 03:00:53,860] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 03:00:53,876] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.670 seconds
+[2022-02-22 03:01:24,412] {processor.py:163} INFO - Started process (PID=1742) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:01:24,413] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 03:01:24,414] {logging_mixin.py:109} INFO - [2022-02-22 03:01:24,414] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:01:24,873] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:01:24,885] {logging_mixin.py:109} INFO - [2022-02-22 03:01:24,884] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:01:24,907] {logging_mixin.py:109} INFO - [2022-02-22 03:01:24,907] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 03:01:24,918] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.509 seconds
+[2022-02-22 03:01:55,198] {processor.py:163} INFO - Started process (PID=1769) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:01:55,199] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 03:01:55,199] {logging_mixin.py:109} INFO - [2022-02-22 03:01:55,199] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:01:55,667] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:01:55,689] {logging_mixin.py:109} INFO - [2022-02-22 03:01:55,688] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:01:55,710] {logging_mixin.py:109} INFO - [2022-02-22 03:01:55,710] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 03:01:55,721] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.526 seconds
+[2022-02-22 03:02:26,082] {processor.py:163} INFO - Started process (PID=1796) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:02:26,083] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 03:02:26,084] {logging_mixin.py:109} INFO - [2022-02-22 03:02:26,084] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:02:26,615] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:02:26,635] {logging_mixin.py:109} INFO - [2022-02-22 03:02:26,634] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:02:26,657] {logging_mixin.py:109} INFO - [2022-02-22 03:02:26,656] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 03:02:26,679] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.600 seconds
+[2022-02-22 03:02:57,036] {processor.py:163} INFO - Started process (PID=1823) to work on /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:02:57,037] {processor.py:642} INFO - Processing file /opt/airflow/dags/cassandra_create_test_database_dag.py for tasks to queue
+[2022-02-22 03:02:57,038] {logging_mixin.py:109} INFO - [2022-02-22 03:02:57,038] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:02:57,569] {processor.py:654} INFO - DAG(s) dict_keys(['cassandra_create_test_database_dag']) retrieved from /opt/airflow/dags/cassandra_create_test_database_dag.py
+[2022-02-22 03:02:57,600] {logging_mixin.py:109} INFO - [2022-02-22 03:02:57,599] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-22 03:02:57,624] {logging_mixin.py:109} INFO - [2022-02-22 03:02:57,624] {dag.py:2935} INFO - Setting next_dagrun for cassandra_create_test_database_dag to 2022-02-22T00:00:00+00:00
+[2022-02-22 03:02:57,634] {processor.py:171} INFO - Processing /opt/airflow/dags/cassandra_create_test_database_dag.py took 0.600 seconds
