@@ -1,0 +1,32 @@
+[2022-02-19 16:46:06,906] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: configuration_dag.bash_task manual__2022-02-19T00:00:00+00:00 [queued]>
+[2022-02-19 16:46:06,921] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: configuration_dag.bash_task manual__2022-02-19T00:00:00+00:00 [queued]>
+[2022-02-19 16:46:06,921] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-19 16:46:06,921] {taskinstance.py:1239} INFO - Starting attempt 9 of 9
+[2022-02-19 16:46:06,922] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-19 16:46:06,938] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): bash_task> on 2022-02-19 00:00:00+00:00
+[2022-02-19 16:46:06,942] {standard_task_runner.py:52} INFO - Started process 603 to run task
+[2022-02-19 16:46:06,945] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'configuration_dag', 'bash_task', 'manual__2022-02-19T00:00:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/configuration_dag.py', '--cfg-path', '/tmp/tmpgz4k2xh5', '--error-file', '/tmp/tmptxmxigcf']
+[2022-02-19 16:46:06,946] {standard_task_runner.py:77} INFO - Job 35: Subtask bash_task
+[2022-02-19 16:46:07,003] {logging_mixin.py:109} INFO - Running <TaskInstance: configuration_dag.bash_task manual__2022-02-19T00:00:00+00:00 [running]> on host ff4bf3af9cad
+[2022-02-19 16:46:07,058] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=configuration_dag
+AIRFLOW_CTX_TASK_ID=bash_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-19T00:00:00+00:00
+[2022-02-19 16:46:07,059] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-02-19 16:46:07,059] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/usr/local/spark/configure.sh ']
+[2022-02-19 16:46:07,069] {subprocess.py:85} INFO - Output:
+[2022-02-19 16:46:10,129] {subprocess.py:89} INFO - A connection with `conn_id`=spark_default already exists.
+[2022-02-19 16:46:13,811] {subprocess.py:89} INFO - [[34m2022-02-19 16:46:13,811[0m] {[34mcrypto.py:[0m82} WARNING[0m - empty cryptography key - values will not be stored encrypted.[0m
+[2022-02-19 16:46:13,819] {subprocess.py:89} INFO - A connection with `conn_id`=minio_default already exists.
+[2022-02-19 16:46:17,262] {subprocess.py:89} INFO - [[34m2022-02-19 16:46:17,261[0m] {[34mcrypto.py:[0m82} WARNING[0m - empty cryptography key - values will not be stored encrypted.[0m
+[2022-02-19 16:46:17,267] {subprocess.py:89} INFO - A connection with `conn_id`=cassandra_default already exists.
+[2022-02-19 16:46:19,113] {subprocess.py:89} INFO - Installed kernelspec python3 in /home/***/.local/share/jupyter/kernels/python3
+[2022-02-19 16:46:19,222] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-02-19 16:46:19,248] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=configuration_dag, task_id=bash_task, execution_date=20220219T000000, start_date=20220219T164606, end_date=20220219T164619
+[2022-02-19 16:46:19,269] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-19 16:46:19,298] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

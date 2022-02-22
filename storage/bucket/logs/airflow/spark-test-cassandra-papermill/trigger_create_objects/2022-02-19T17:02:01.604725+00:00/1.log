@@ -1,0 +1,27 @@
+[2022-02-19 17:02:34,782] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: spark-test-cassandra-papermill.trigger_create_objects manual__2022-02-19T17:02:01.604725+00:00 [queued]>
+[2022-02-19 17:02:34,800] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: spark-test-cassandra-papermill.trigger_create_objects manual__2022-02-19T17:02:01.604725+00:00 [queued]>
+[2022-02-19 17:02:34,800] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-19 17:02:34,800] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-02-19 17:02:34,800] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-19 17:02:34,822] {taskinstance.py:1259} INFO - Executing <Task(TriggerDagRunOperator): trigger_create_objects> on 2022-02-19 17:02:01.604725+00:00
+[2022-02-19 17:02:34,833] {standard_task_runner.py:52} INFO - Started process 1501 to run task
+[2022-02-19 17:02:34,837] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'spark-test-cassandra-papermill', 'trigger_create_objects', 'manual__2022-02-19T17:02:01.604725+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/spark-cassandra-dag_withPapermill.py', '--cfg-path', '/tmp/tmpx1ufeojb', '--error-file', '/tmp/tmp2ak9g151']
+[2022-02-19 17:02:34,839] {standard_task_runner.py:77} INFO - Job 66: Subtask trigger_create_objects
+[2022-02-19 17:02:34,983] {logging_mixin.py:109} INFO - Running <TaskInstance: spark-test-cassandra-papermill.trigger_create_objects manual__2022-02-19T17:02:01.604725+00:00 [running]> on host ff4bf3af9cad
+[2022-02-19 17:02:35,090] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=spark-test-cassandra-papermill
+AIRFLOW_CTX_TASK_ID=trigger_create_objects
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-19T17:02:01.604725+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-19T17:02:01.604725+00:00
+[2022-02-19 17:02:36,130] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/api/common/experimental/trigger_dag.py:91: DeprecationWarning: Calling `DAG.create_dagrun()` without an explicit data interval is deprecated
+  dag_hash=dag_bag.dags_hash.get(dag_id),
+
+[2022-02-19 17:02:36,149] {trigger_dagrun.py:167} INFO - Waiting for cassandra_create_test_database_dag on 2022-02-19T17:02:01.604725+00:00 to become allowed state ['success'] ...
+[2022-02-19 17:03:36,216] {trigger_dagrun.py:176} INFO - cassandra_create_test_database_dag finished with allowed state success
+[2022-02-19 17:03:36,227] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=spark-test-cassandra-papermill, task_id=trigger_create_objects, execution_date=20220219T170201, start_date=20220219T170234, end_date=20220219T170336
+[2022-02-19 17:03:36,287] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-19 17:03:36,323] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

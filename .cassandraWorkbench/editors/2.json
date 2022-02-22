@@ -1,1 +1,1 @@
-{"id":"pLHnz9ygRtBZW26m","body":"TRUNCATE TABLE test.days_worked_by_previous_employees_by_job_title;","filename":"script_1.cql","clusterName":"Cluster PasswordAuthenticator","keyspace":"test","source":"action","modified":true}
+{"id":"coFMrL6XaKkIsSHv","body":"TRUNCATE TABLE test.previous_employees_by_job_title;","filename":"script_3.cql","clusterName":"Cluster PasswordAuthenticator","keyspace":"test","source":"action","modified":true}

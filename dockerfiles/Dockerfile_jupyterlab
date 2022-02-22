@@ -1,0 +1,38 @@
+FROM jupyter/pyspark-notebook:spark-3.2.0
+USER root
+
+
+# Install OpenJDK-11
+RUN apt update && \
+    apt-get install -y openjdk-11-jdk && \
+    apt-get install -y ant && \
+    apt-get clean;
+
+
+# Set JAVA_HOME
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
+RUN export JAVA_HOME
+
+RUN pip3 install --upgrade "elyra>=2.0.1" && jupyter lab build
+
+USER jovyan
+
+# Configure the github_repo_token variable with a real token created on Github
+RUN elyra-metadata install runtimes \
+       --display_name="Airflow Pipeline Runtime" \
+       --description="descricao" \
+       --api_endpoint=http://172.20.0.4 \
+       --user_namespace="airflow" \
+       --github_repo="michelmourasilva/airflowdags" \
+       --github_branch="master" \
+       --github_repo_token="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" \
+       --cos_endpoint=http://172.20.0.14:9000 \
+       --cos_bucket=jupyter-runtime \ 
+       --cos_username=minio \
+       --cos_password=minio123 \
+       --git_type="GITHUB" \
+       --github_api_endpoint=https://api.github.com \
+       --cos_auth_type="USER_CREDENTIALS" \
+       --runtime_type="APACHE_AIRFLOW" \
+       --tags="['airflow', 'v1.0']" \
+       --schema_name=airflow    

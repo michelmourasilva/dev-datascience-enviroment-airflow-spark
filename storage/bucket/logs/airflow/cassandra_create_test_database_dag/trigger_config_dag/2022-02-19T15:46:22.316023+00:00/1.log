@@ -1,0 +1,25 @@
+[2022-02-19 15:46:22,922] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: cassandra_create_test_database_dag.trigger_config_dag manual__2022-02-19T15:46:22.316023+00:00 [queued]>
+[2022-02-19 15:46:22,934] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: cassandra_create_test_database_dag.trigger_config_dag manual__2022-02-19T15:46:22.316023+00:00 [queued]>
+[2022-02-19 15:46:22,934] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-19 15:46:22,934] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-02-19 15:46:22,934] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-19 15:46:22,946] {taskinstance.py:1259} INFO - Executing <Task(TriggerDagRunOperator): trigger_config_dag> on 2022-02-19 15:46:22.316023+00:00
+[2022-02-19 15:46:22,951] {standard_task_runner.py:52} INFO - Started process 3192 to run task
+[2022-02-19 15:46:22,954] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cassandra_create_test_database_dag', 'trigger_config_dag', 'manual__2022-02-19T15:46:22.316023+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/cassandra_create_test_database_dag.py', '--cfg-path', '/tmp/tmpxx7e6wfq', '--error-file', '/tmp/tmpor2ychxx']
+[2022-02-19 15:46:22,954] {standard_task_runner.py:77} INFO - Job 21: Subtask trigger_config_dag
+[2022-02-19 15:46:23,009] {logging_mixin.py:109} INFO - Running <TaskInstance: cassandra_create_test_database_dag.trigger_config_dag manual__2022-02-19T15:46:22.316023+00:00 [running]> on host 38342be44bf7
+[2022-02-19 15:46:23,066] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cassandra_create_test_database_dag
+AIRFLOW_CTX_TASK_ID=trigger_config_dag
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-19T15:46:22.316023+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-19T15:46:22.316023+00:00
+[2022-02-19 15:46:23,104] {trigger_dagrun.py:145} INFO - Clearing configuration_dag on 2022-02-19T00:00:00+00:00
+[2022-02-19 15:46:23,194] {trigger_dagrun.py:167} INFO - Waiting for configuration_dag on 2022-02-19 00:00:00+00:00 to become allowed state ['success'] ...
+[2022-02-19 15:46:53,235] {trigger_dagrun.py:176} INFO - configuration_dag finished with allowed state success
+[2022-02-19 15:46:53,252] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=cassandra_create_test_database_dag, task_id=trigger_config_dag, execution_date=20220219T154622, start_date=20220219T154622, end_date=20220219T154653
+[2022-02-19 15:46:53,316] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-19 15:46:53,441] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

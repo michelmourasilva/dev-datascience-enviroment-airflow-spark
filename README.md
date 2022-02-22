@@ -1,4 +1,4 @@
-# Lab Big Data
+# Data Lakes: Big Data with Lambda Architecture
 This lab environment is composed by:
 
 - Apache Spark
@@ -15,7 +15,9 @@ The initial idea is to do a ingestion from a a datasource (flat files) to Cassan
 
 ## Todo
 
-- [ ] Minio Integration with others services
+- [x] Minio Integration with Apache Spark (Tested via notebooks)
+- [ ] Minio Integration with Apache Airflow
+- [ ] Minio Integration with Apache Cassandra
 - [ ] Alyra correct integration - Save Dags in Apache Airflow
 
 ## Set-up 
@@ -43,6 +45,11 @@ Install an extension so that you can develop using the containers created by doc
 
 ![alt text](docs/images/vscode_extension.png)
 
+
+if this is the first time you open the project folder, a message will probably appear to confirm the opening of the project in a container, as in the image below
+
+![alt text](docs/images/VisualCode_remoteconectpopup.png)
+
 #### Notebooks
 
 Visual Code makes it possible to run notebooks remotely using an existing Jupyter service. 
@@ -67,7 +74,7 @@ And then you will be asked for the service password. The password is datalake
 docker-compose up -d --remove-orphans --force-recreate
 ```
 
-### Access services
+### Services
 
 #### - Jupyterlab
 
@@ -83,7 +90,7 @@ password: airflow
 
 #### - Apache Spark
 
-http://172.20.0.9:8080/
+http://172.20.0.9:8282/
 
 #### - Cassandra
 
@@ -107,41 +114,55 @@ or using Cassandra Extension in Visual Code
 
 
 ```
-|-- .cassandraWorkbench                            CassandraWorkbench extension folder
-|-- .devcontainer                                  Set of development container definitions
-|   |-- devcontainer.json                          Container configuration file
-|   |-- docker-compose.yml                         Extra settings for running docker-compose file
-|-- .vscode                                        Contain settings, task settings, and debug settings
-|   |-- settings.json                              Extension settings for linters and code formatting tools to enforce the language rules used in this repo
-|-- dags                                           Folder where the Apache Airflow Dags configuration files will be stored.
-|   |-- spark-cassandra-dag.py                     Example Dag file that runs an app(python) that will read from a text file and insert into cassandra tables
-|   |-- spark-cassandra-dag_withPapermill.py       Example Dag file that runs Notebook using Papermill extension, which in turn will read from a text file and insert into cassandra tables
-|   |-- spark-dag.py                               Dag file example that runs an application (python) that only checks if the connection to spark is working
-|-- data                                           Shared folder between Apache Airflow, JupiterLab and Apache Spark that stores raw files
-|-- docs                                           Folder for other types of documentation
-|-- logs                                           Log storage of all services
-|-- notebooks                                      Shared folder between Apache Airflow, JupiterLab and Apache Spark that stores Pyspark Notebooks
-|   |-- spark-book-count.ipynb                     Notebook that only checks if the connection to spark is working
-|   |-- spark-extract-and-load.ipynb               Notebook that will read from a text file and insert into cassandra tables
-|-- spark-apps                                     Shared folder between Apache Airflow, JupiterLab and Apache Spark that stores Python applications
-|   |-- spark-book-count.py                        Python application that only checks if the connection to spark is working
-|   |-- spark-cassandra-test.py                    Python application that will read from a text file and insert into cassandra tables
-|-- docker-compose.yaml                            Docker-compose file
-|-- Dockerfile                                     Apache Airflow docker file. Required for Java to be installed on the service
-|-- README.md                                      Readme file
-|-- .cassandraWorkbench.jsonc                      CassandraWorkbanch extension configuration. In this file is Cassandra's host address
+|-- .cassandraWorkbench                                CassandraWorkbench extension folder
+|-- .devcontainer                                      Set of development container definitions
+|   |-- devcontainer.json                              Container configuration file
+|   |-- docker-compose.yml                             Extra settings for running docker-compose file
+|-- .vscode                                            Contain settings, task settings, and debug settings
+|   |-- settings.json                                  Extension settings for linters and code formatting tools to enforce the language rules used in this repo
+|-- config                                             Contain settings, task settings, and debug settings
+|   |-- airflow                                        Extension settings for linters and code formatting tools to enforce the language rules used in this repo
+|   |   |-- configure.sh                               Extra airflow settings that could not be executed when creating the container. They contain the creation of standard connections and the installation of a kernel to run notebooks
+|-- dockerfiles				         Custom docker files
+|   |-- Dockerfile_airflow                             Apache Airflow docker file. Required for Java to be installed on the service
+|   |-- Dockerfile_jupyterlab                          JupyterLab docker file. Required for personalized libraries and plugins
+|   |-- Dockerfile_spark                               Spark docker file. Required for personalized libraries and plugins. Required for changing Python version. This version needs to be the same as the Python version in the Apache Spark container
+|-- docs                                               Folder for other types of documentation
+|-- storage                                            Folder that will centralize and simulate an s3 storage using minio
+|   |-- bucket                                         Just a separation to define the main volume of the buckets used by Minio
+|   |   |-- airflow-dags                               Folder where the Apache Airflow Dags configuration files will be stored.
+|   |   |   |-- cassandra_create_test_database_dag.py  Sample Dag file example that creates objects(keyspace table) in Cassandra
+|   |   |   |-- configuration_dag.py                   Sample Dag file example that creates the default connections and the installation of a kernel for running notebooks
+|   |   |   |-- spark-cassandra-dag.py                 Sample Dag file that runs an app(python) that will read from a text file and insert into cassandra tables
+|   |   |   |-- spark-cassandra-dag_withPapermill.py   Sample Dag file that runs Notebook using Papermill extension, which in turn will read from a text file and insert into cassandra tables
+|   |   |   |-- spark-dag.py                           Sample Dag file example that runs an application (python) that only checks if the connection to spark is working
+|   |   |-- data                                       Shared folder between Apache Airflow, JupiterLab and Apache Spark that stores raw files
+|   |   |-- logs                                       Log storage of all services
+|   |   |-- jupyter-notebooks                          Shared folder between Apache Airflow, JupiterLab and Apache Spark that stores Pyspark Notebooks
+|   |   |   |-- spark-book-count.ipynb                 Sample Notebook that only checks if the connection to spark is working
+|   |   |   |-- spark-extract-and-load.ipynb           Sample Notebook that will read from a text file and insert into cassandra tables
+|   |   |   |-- spark-excel.ipynb                      Sample Notebook that will read from a Excel file 
+|   |   |   |-- spark-minios3.ipynb                    Sample Notebook that will read a flat file in an s3/minio bucket
+|   |   |   |-- spark-minios3-excel.ipynb              Sample Notebook that will read from a Excel file in an s3/minio bucket
+|   |   |-- spark-apps                                 Shared folder between Apache Airflow, JupiterLab and Apache Spark that stores Python applications
+|   |   |   |-- spark-book-count.py                    Sample Python application that only checks if the connection to spark is working
+|   |   |   |-- spark-cassandra-test.py                Sample Python application that will read from a text file and insert into cassandra tables
+|-- docker-compose.yaml                                Docker-compose file
+|-- README.md                                          Readme file
+|-- .cassandraWorkbench.jsonc                          CassandraWorkbanch extension configuration. In this file is Cassandra's host address
 ```
 
 # Examples
 
-In this project, there are some examples made in both Python and Notebooks. In some cases it is necessary to create objects within Cassandra. Follow the [documentation](#create-keyspace-and-tables-in-cassandra).
+In this project, there are some examples made in both Python and Notebooks. The creation of all dependencies for the tests will be done by Dags that are created in Airflow.
 
 ## Dependency 
 
 ### Create keyspace and tables in cassandra
 
-Execute script in Cassandra database using the various methods described in the [documentation](#cassandra).
+The creation of the database objects for testing is in the Airflow Dag: cassandra_create_test_database_dag.py. If it is necessary to create manually, use the various access methods in cassandra, as described in this  [documentation](#cassandra).
 
+Scripts that will be run by airflow Dags:
 
 >create keyspace test with replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 
@@ -186,6 +207,10 @@ However, this configuration can also be done using the Apache Spark web interfac
 
 ![alt text](docs/images/ApacheAirflow_connection.png)
 
+>[!WARNING]
+
+But for this simulation in Docker, this configuration will be executed via Airflow's Dag (configuration_dag.py).
+
 ## Using Notebooks 
 
 ### Python Kernel on Apache Airflow
@@ -194,7 +219,9 @@ Installing a Python kernel so notebooks can be referenced by Apache Airflow with
 
 > pip install ipython ipykernel
 
-> ipython kernel install --name "python3"
+> ipython kernel install --user --name "python3"
+
+:warning: But for this simulation in Docker, this configuration will be executed via Airflow's Dag (configuration_dag.py).
 
 ## Install Papermill
 
@@ -202,3 +229,5 @@ Apache Airflow supports integration with Papermill. Papermill is a tool for para
 
 > pip install apache-airflow-providers-papermill==2.2.0
 
+>[!WARNING]
+But for this simulation in Docker, this configuration is already being executed in the creation of the containers.
