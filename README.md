@@ -207,9 +207,8 @@ However, this configuration can also be done using the Apache Spark web interfac
 
 ![alt text](docs/images/ApacheAirflow_connection.png)
 
->[!WARNING]
 
-But for this simulation in Docker, this configuration will be executed via Airflow's Dag (configuration_dag.py).
+:warning: But for this simulation in Docker, this configuration will be executed via Airflow's Dag (configuration_dag.py).
 
 ## Using Notebooks 
 
@@ -229,5 +228,5 @@ Apache Airflow supports integration with Papermill. Papermill is a tool for para
 
 > pip install apache-airflow-providers-papermill==2.2.0
 
->[!WARNING]
-But for this simulation in Docker, this configuration is already being executed in the creation of the containers.
+
+:warning: But for this simulation in Docker, this configuration is already being executed in the creation of the containers.
