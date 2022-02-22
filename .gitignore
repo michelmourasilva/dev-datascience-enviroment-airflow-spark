@@ -1,1 +1,1 @@
-storage/bucket/logs/*
+storage/bucket/logs/airflow/**
