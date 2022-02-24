@@ -347,7 +347,7 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - ./storage/bucket/jupyter-notebooks:/home/jovyan/work
+      - ./storage/bucket/jupyter-notebooks:/home/jovyan/
       - ./storage/bucket/data:/usr/local/spark/data
       - ./:/workspace
       - ./storage/jupyter-runtime:/home/jovyan/.local/share/jupyter/runtime

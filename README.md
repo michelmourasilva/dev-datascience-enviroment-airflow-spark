@@ -144,6 +144,7 @@ or using Cassandra Extension in Visual Code
 |   |   |   |-- spark-excel.ipynb                      Sample Notebook that will read from a Excel file 
 |   |   |   |-- spark-minios3.ipynb                    Sample Notebook that will read a flat file in an s3/minio bucket
 |   |   |   |-- spark-minios3-excel.ipynb              Sample Notebook that will read from a Excel file in an s3/minio bucket
+|   |   |   |-- spark-minios3-excel-deltakae.ipynb     Sample Notebook that will read from a Excel file in an s3/minio bucket and using Delta Lake
 |   |   |-- spark-apps                                 Shared folder between Apache Airflow, JupiterLab and Apache Spark that stores Python applications
 |   |   |   |-- spark-book-count.py                    Sample Python application that only checks if the connection to spark is working
 |   |   |   |-- spark-cassandra-test.py                Sample Python application that will read from a text file and insert into cassandra tables

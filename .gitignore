@@ -1,1 +1,2 @@
 !storage/bucket/logs/airflow/empty
+!storage/bucket/jupyter-notebooks/*.ipynb
